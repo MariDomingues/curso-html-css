@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background: #BBB;
     padding: 20px 0;
@@ -90,11 +94,6 @@ footer {
     margin-top: 20px;
 }
 
-main {
-    width: 940px;
-    margin: 0 auto;
-}
-
 form {
     margin: 40px 0;
 }
@@ -147,4 +146,143 @@ thead {
 td, th {
     border: 1px solid #000;
     padding: 8px 15px;
+}
+
+/*css da página inicial*/
+.banner {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 130px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.titulo-principal:first-letter {
+    font-weight: bold;
+}
+
+.titulo-principal:before {
+    content: "[ ";
+}
+
+.titulo-principal:after {
+    content: " ]";
+}
+
+.beneficios {
+    background: #FEFEFE;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens::before {
+    content: "✦ ";
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.imagem-beneficios {
+    width: 60%;
+    box-shadow: 10px 10px 5px  #555;
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.7;
+    transition: 600ms;
+}
+.video {
+    width: 560px;
+    margin: 2em auto 0 auto;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/**
+seleciona as tags p que são filhas direta da main, ou seja, as tags p que são logo depois da main e estando um nivel abaixo
+main > p {}
+
+seleciona as tags p que são irmãs da img, ou seja, as tags p que são logo depois da img e que estão no mesmo nivel
+img + p {}
+
+seleciona todas as tags p depois da img
+img ~ p {}
+
+seleciona todos os paragrafos (tag p) que não tem o id missao
+.principal p:not(#missao) {}
+*/
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
 }
